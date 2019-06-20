@@ -1,12 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, Link, NavLink, BrowserRouter as Router } from 'react-router-dom'
+
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Notfound from './NotFound';
+import Driver from './Driver';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Main from './Main';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
+import ButtonAppBar from './ButtonAppBar';
+import Home from './Home/HomePage';
+
+
+
+//ReactDOM.render((
+    // <Router>
+    //     <div>
+    //         {/* <Route path="/" component={Home} /> */}
+    //         <Route path="/login" component={Signin} />
+    //         <Route path="/signup" component={SignUp} />
+    //         <Route path="/driver/:id" component={Driver} />
+    //         <Route component={Notfound} />
+    //     </div>
+    // </Router>), document.getElementById('root'));
+
+ReactDOM.render(<Main />, document.getElementById('root'));
+//ReactDOM.render(<ButtonAppBar />, document.getElementById('root'));
+
 serviceWorker.unregister();
